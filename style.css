@@ -1,0 +1,88 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  height: 100vh;
+  overflow: auto;
+  max-width: 540px;
+  margin: 0 auto;
+  min-height: 17.5rem;
+  display: flex;
+  flex-direction: column;
+  background: #ebecf0;;
+}
+
+.screen1 {
+  flex-grow: 2;
+  background: url('./images/background.png') no-repeat center top/100% auto;
+  position: relative;
+}
+
+.logo {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 2.173333rem;
+  width: 3.506667rem;
+  background: url('./images/logo.png') no-repeat center center /contain;
+}
+
+.banner {
+  position: absolute;
+  height: 2.733333rem;
+  background: url('./images/homebanner.png') no-repeat center center /contain;
+  left: 0;
+  top: 2.7rem;
+  width: 100%;
+  ;
+}
+
+.image-box {
+  position: absolute;
+  top: 13.9rem;
+  width: 6rem;
+  left: 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.figure-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.qrcode {
+  width: 1.44rem;
+  height: 1.44rem;
+  background: url('./images/qrcode.png') no-repeat center center /contain;
+}
+
+.user-head {
+  width: 1.44rem;
+  height: 1.44rem;
+  border-radius: 1.44rem;
+  background: url('./images/qrcode.png') no-repeat center center /contain;
+}
+
+.figure-item .text {
+  margin-top: .2rem;
+  color: #526386;
+  font-size: 11px;
+  text-align: center;
+}
+
+.ad-text {
+  color: #666666;
+  font-size: 11px;
+  position: absolute;
+  top: 16.9rem;
+  width: 100%;
+  left:0;
+  text-align: center;
+}
