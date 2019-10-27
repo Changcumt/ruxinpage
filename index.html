@@ -9,33 +9,62 @@
   </script>
   <meta content="telephone=yes" name="format-detection" />
   <title></title>
+  <link rel="stylesheet" href="./swiper.min.css">
   <link rel="stylesheet" href="./style.css">
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/swiper.jquery.min.js"></script>
+  <script src="./js/pace.min.js"></script>
+
 </head>
 
 <body>
-  <div class="wrapper">
-    <div class="screen screen1">
-      <div class="logo"></div>
-      <div class="banner"></div>
-      <div class="image-box">
-        <div class="figure-item">
-          <div class="pic qrcode"></div>
-          <div class="text">
-            <p>长按识别二维码</p>
-            <p>前往星享称参与活动</p>
-          </div>
+  <div class="wrapper swiper-container">
+    <div class="swiper-wrapper">
+      <div class="screen swiper-slide loading ">
+        <div class="yagao"></div>
+        <div class="text"></div>
+        <div class="more-btn"></div>
+        <canvas class="canvas" id="canvas"></canvas>
+      </div>
+      <div class="screen swiper-slide screen1">
+        <div class="float-icon ca"></div>
+        <div class="float-icon cha"></div>
+        <div class="float-icon chazi"></div>
+        <div class="float-icon yanzi"></div>
+        <div class="more-btn"></div>
+      </div>
+      <div class="screen swiper-slide screen2">
+        <div class="more-btn"></div>
+        <div class="btns">
+          <div class="btn rule-btn"></div>
+          <div class="btn buy-btn"></div>
         </div>
-        <div class="figure-item">
-          <div class="pic user-head"></div>
-          <div class="text">
-            <p>用户昵称</p>
+        <div class="ad-text"> *1为1组牙膏4支装，2为2支牙刷 </div>
+
+        <div class="rule-float-box">
+          <div class="content">
+            <div class="close-btn"></div>
+            <div class="header">牙膏促销活动规则</div>
+            <div class="rule-item">
+              活动时间：2019.11.18 10:00开始，<br>
+              数量有限，售完即止
+            </div>
+            <div class="rule-item">
+              1：活动期间通过星享城下单，凡购买“牙膏
+              套装一套（四支装）”，即可获赠赠品“
+              如新炫彩宽幅牙刷两支”。
+            </div>
+            <div class="rule-item"> 2：每个用户限购2件</div>
+            <div class="rule-item">3：该活动与新顾客满减等其它活动同享</div>
+            <div class="rule-item">4：牙膏套装产品售完即止</div>
           </div>
         </div>
       </div>
-      <div class="ad-text"> *1为1组牙膏4支装，2为2支牙刷 </div>
     </div>
   </div>
 </body>
+<script src="./js/animate.js"></script>
+<script src="./js/common.js"></script>
 <script>
   window.onresize = function () {
     document.documentElement.style.fontSize = (window.innerWidth > 540 ? 540 : window.innerWidth) / 10 + 'px'

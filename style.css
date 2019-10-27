@@ -11,78 +11,268 @@
   overflow: auto;
   max-width: 540px;
   margin: 0 auto;
-  min-height: 17.5rem;
+  /* min-height: 17.5rem; */
   display: flex;
   flex-direction: column;
-  background: #ebecf0;;
+  background: #ebecf0;
 }
 
-.screen1 {
+.screen {
   flex-grow: 2;
-  background: url('./images/background.png') no-repeat center top/100% auto;
   position: relative;
 }
 
-.logo {
-  top: 0;
-  left: 0;
-  position: absolute;
-  height: 2.173333rem;
-  width: 3.506667rem;
-  background: url('./images/logo.png') no-repeat center center /contain;
+.loading {
+  background: url('./images/loading/bg.png') no-repeat center top/100% auto;
+  overflow: hidden;
 }
 
-.banner {
+.loading .canvas{
+  width: 4.6rem;
+  height: 3.3rem;
   position: absolute;
-  height: 2.733333rem;
-  background: url('./images/homebanner.png') no-repeat center center /contain;
-  left: 0;
-  top: 2.7rem;
+  top: 5.2rem;
+  left: 0rem;
+}
+.loading .yagao {
+  height: 2.093333rem;
+  background: url('./images/loading/yagao.png') no-repeat center top/100% auto;
+  top: 10.666667rem;
   width: 100%;
-  ;
-}
-
-.image-box {
   position: absolute;
-  top: 13.9rem;
-  width: 6rem;
-  left: 2rem;
-  display: flex;
-  justify-content: space-around;
 }
 
-.figure-item {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+.loading .text {
+  height: 1.213333rem;
+  background: url('./images/loading/text.png') no-repeat center top/100% auto;
+  top: 13.106667rem;
+  width: 100%;
+  position: absolute;
 }
 
-.qrcode {
-  width: 1.44rem;
-  height: 1.44rem;
-  background: url('./images/qrcode.png') no-repeat center center /contain;
+.loading .more-btn {
+  height: 1.4rem;
+  background: url('./images/loading/more.png') no-repeat center top/auto 100%;
+  width: 100%;
+  bottom: .42rem;
+  position: absolute;
 }
 
-.user-head {
-  width: 1.44rem;
-  height: 1.44rem;
-  border-radius: 1.44rem;
-  background: url('./images/qrcode.png') no-repeat center center /contain;
+.screen1 {
+  /* display: none; */
+  background: url('./images/screen1/bg.png') no-repeat center top/100% auto;
 }
 
-.figure-item .text {
-  margin-top: .2rem;
-  color: #526386;
-  font-size: 11px;
-  text-align: center;
+.screen1 .more-btn {
+  height: 1.4rem;
+  background: url('./images/screen1/more.png') no-repeat center top/auto 100%;
+  width: 100%;
+  bottom: .32rem;
+  position: absolute;
 }
 
-.ad-text {
+.screen1 .float-icon {
+  position: absolute;
+}
+
+.screen1 .ca {
+  top: 5.773333rem;
+  left: 5.36rem;
+  width: 1.68rem;
+  height: 1.68rem;
+  background: url('./images/screen1/ca.png')no-repeat center center /contain;
+  animation: ca-anim 8s linear alternate infinite;
+  transform: translate(0, 0);
+}
+
+@keyframes ca-anim {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  30% {
+    transform: translate(-0.4rem, -1rem);
+  }
+
+  60% {
+    transform: translate(0.4rem, -2rem);
+  }
+
+  100% {
+    transform: translate(0rem, -3rem);
+  }
+}
+
+.screen1 .cha {
+  top: 7.32rem;
+  left: 2.36rem;
+  width: 1.68rem;
+  height: 1.68rem;
+  background: url('./images/screen1/cha.png')no-repeat center center /contain;
+  animation: cha-anim 7s linear alternate infinite;
+  transform: translate(0, 0);
+}
+@keyframes cha-anim {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  30% {
+    transform: translate(-0.4rem, -1.2rem);
+  }
+
+  60% {
+    transform: translate(0.2rem, -2rem);
+  }
+
+  100% {
+    transform: translate(0rem, -3.4rem);
+  }
+}
+
+.screen1 .chazi {
+  top: 3.586667rem;
+  left: 4.16rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: url('./images/screen1/chazi.png')no-repeat center center /contain;
+  animation: chazi-anim 9s linear alternate infinite;
+  transform: translate(0, 0);
+}
+@keyframes chazi-anim {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  30% {
+    transform: translate(-0.4rem, 0.6rem);
+  }
+
+  60% {
+    transform: translate(0.2rem, 1.5rem);
+  }
+
+  100% {
+    transform: translate(0rem, 2rem);
+  }
+}
+
+.screen1 .yanzi {
+  top: 2.786667rem;
+  left: 6.893333rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: url('./images/screen1/yanzi.png') no-repeat center center /contain;
+  animation: yanzi-anim 8s linear alternate infinite;
+  transform: translate(0, 0);
+}
+@keyframes yanzi-anim {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  30% {
+    transform: translate(0.4rem, 1.2rem);
+  }
+
+  60% {
+    transform: translate(-0.2rem, 2rem);
+  }
+
+  100% {
+    transform: translate(0rem, 2.8rem);
+  }
+}
+
+.screen2 {
+  /* display: none; */
+  background: url('./images/screen2/bg.png') no-repeat center top/100% auto;
+}
+
+.screen2 .ad-text {
   color: #666666;
   font-size: 11px;
   position: absolute;
-  top: 16.9rem;
+  bottom: .72rem;
   width: 100%;
-  left:0;
+  left: 0;
   text-align: center;
+}
+
+.screen2 .btns {
+  position: absolute;
+  width: 100%;
+  bottom: 1.76rem;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 0.5rem;
+
+}
+
+.screen2 .btn {
+  width: 4.053333rem;
+  height: 1.386667rem;
+}
+
+.screen2 .rule-btn {
+  background: url('./images/screen2/rule-btn.png') no-repeat center center /100% auto;
+
+}
+
+.screen2 .buy-btn {
+  background: url('./images/screen2/buy-btn.png') no-repeat center center /100% auto;
+
+}
+
+.screen2 .more-btn {
+  height: 1.4rem;
+  background: url('./images/screen1/more.png') no-repeat center top/auto 100%;
+  width: 100%;
+  top: .6rem;
+  position: absolute;
+}
+
+.screen2 .rule-float-box {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.15);
+  align-items: center;
+  justify-content: center;
+}
+
+.screen2 .content {
+  width: 7.626667rem;
+  background: #fff;
+  border-radius: 4px;
+  position: relative;
+  font-size: .373333rem;
+  padding: .48rem .64rem;
+}
+
+.screen2 .close-btn {
+  position: absolute;
+  right: 0;
+  top: -1.2rem;
+  height: .88rem;
+  width: .88rem;
+  background: url('./images/screen2/close.png') no-repeat center center /100% auto;
+}
+
+.screen2 .header {
+  font-size: .48rem;
+  color: #355597;
+  border-bottom: 1px solid #cccccc;
+  height: 1.24rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.3rem;
+}
+
+.screen2 .rule-item {
+  margin: 0.2rem 0;
 }
