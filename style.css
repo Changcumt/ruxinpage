@@ -110,11 +110,29 @@
   width: 1.68rem;
   height: 1.68rem;
   background: url('./images/screen1/ca.png')no-repeat center center /contain;
+  -webkit-animation: ca-anim 8s linear alternate infinite;
   animation: ca-anim 8s linear alternate infinite;
   transform: translate(0, 0);
 }
 
 @keyframes ca-anim {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  30% {
+    transform: translate(-0.4rem, -1rem);
+  }
+
+  60% {
+    transform: translate(0.4rem, -2rem);
+  }
+
+  100% {
+    transform: translate(0rem, -3rem);
+  }
+}
+@-webkit-keyframes ca-anim {
   0% {
     transform: translate(0, 0);
   }
@@ -213,6 +231,16 @@
   }
 }
 
+.screen3{
+  background: url('./images/screen3/bg.png') no-repeat center top/100% auto;
+}
+.video{
+  position: absolute;
+    width: 7.8rem;
+    height: 8.2rem;
+    top: 8.1rem;
+    left: 1.1rem;
+}
 .screen2 {
   /* display: none; */
   background: url('./images/screen2/bg.png') no-repeat center top/100% auto;
