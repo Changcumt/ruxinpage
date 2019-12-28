@@ -20,41 +20,18 @@ var mySwiper = new Swiper ('.swiper-container', {
 })      
 
 // 加载完图片显示星星动画
+animateInit()
 
-var images = [
-  './images/loading/bg.png',
-  './images/loading/yagao.png',
-  './images/loading/text.png',
-  './images/loading/yagao-img.png',
-  './images/loading/master.png',
-  './images/loading/more.png',
-  './images/screen1/bg.png',
-  './images/screen1/more.png',
-  './images/screen1/ca.png',
-  './images/screen1/cha.png',
-  './images/screen1/chazi.png',
-  './images/screen1/yanzi.png',
-  './images/screen2/bg.png',
-  './images/screen2/rule-btn.png',
-  './images/screen2/buy-btn.png',
-  './images/screen1/more.png'
-]
-var imgCount = 0
 var yaGaoImgEle = document.querySelector('.yagao-img .shadow')
+var randomTime = Math.random()*2000+1000
+var perTickTime = Math.ceil(randomTime/100)
+var count = 0
 function calcImageLoad (){
-  imgCount++
-  var progress = Math.ceil(imgCount/images.length*100)
-  yaGaoImgEle.style.boxShadow = `${6*0.01*progress}rem 0px 13px 0px  #99e3ff`
-  yaGaoImgEle.style.width = `${6*0.01*progress}rem`
-  yaGaoImgEle.style.transform = `translateX(-${6*0.01*progress}rem)`
-
-  if(imgCount === images.length){
-    animateInit()
-  }
+  if(count>100)return
+  count++
+  yaGaoImgEle.style.boxShadow = `${6*0.01*count}rem 0px 13px 0px  #99e3ff`
+  yaGaoImgEle.style.width = `${6*0.01*count}rem`
+  yaGaoImgEle.style.transform = `translateX(-${6*0.01*count}rem)`
+  setTimeout(calcImageLoad,perTickTime)
 }
-
-images.forEach(img=>{
-  var imgObj = new Image()
-  imgObj.src = img
-  imgObj.onload = calcImageLoad
-})
+calcImageLoad()

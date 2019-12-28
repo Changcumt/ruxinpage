@@ -67,13 +67,7 @@ var Twinkle = (function () {
                 i, len, p;
             speedRatio = Math.min((mouse.speedX * mouse.speedX + mouse.speedY * mouse.speedY) * 0.005, 1);
 
-            if (particles.length < MAX_STAR_NUM) {
-                magMax = 1 + 4.5 * speedRatio;
-                magMin = 6 + 6 * speedRatio;
-                scaleMax = 0.5 + 0.5 * speedRatio;
-                len = (50 * Math.random() | 0) + (20 * speedRatio | 0);
-                for (i = 0; i < len; i++) this._createParticle(magMin, magMax, scaleMax);
-            }
+           
 
             fieldLeft = -canvasWidth * 0.5;
             fieldRight = canvasWidth * 1.5;
@@ -86,7 +80,7 @@ var Twinkle = (function () {
                 p.vy *= 0.9;
                 p.x += p.vx + mouse.speedX;
                 p.y += p.vy + mouse.speedY;
-                p.scale -= 0.01;
+                p.scale -= 0.005;
                 p.angle += Math.random();
 
                 if (
@@ -122,6 +116,9 @@ var Twinkle = (function () {
             ctx.fill();
 
             mouse.speedX = mouse.speedY = 0;
+            if (particles.length < 10) {
+                this.init()
+            }
         },
 
         _createParticle: function (magMin, magMax, scaleMax) {
@@ -141,7 +138,7 @@ var Twinkle = (function () {
             this.particles.push(p);
         },
         init() {
-            for (i = 0; i < 200; i++) {
+            for (i = 0; i < 300; i++) {
                 this._createParticle(0.1, 8, 0.8);
             }
         }
